@@ -18,7 +18,7 @@ namespace OdeToVeggie.Services
 
         public string GetMessageOfTheDay()
         {
-            return "Hello " + _configuration["Name"] + "!";
+            return _configuration["Greeting"];
         }
     }
 }

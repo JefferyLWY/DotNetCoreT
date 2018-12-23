@@ -1,17 +1,20 @@
-﻿@model IEnumerable<OdeToVeggie.Models.Restaurant>
+﻿@model OdeToVeggie.ViewModels.HomeViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
-    <h1>Hello and Welcome</h1>
+    <h1>@Model.CurrentMessage</h1>
     <h3>Here are the restaurants:</h3>
     <table>
-        @foreach (var restaurant in Model)
+        @foreach (var restaurant in Model.Restaurants)
         {
         <tr>
             <td>@restaurant.Id</td>
             <td>@restaurant.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-Id="@restaurant.Id">Details</a>
+            </td>
         </tr>
         }
     </table>

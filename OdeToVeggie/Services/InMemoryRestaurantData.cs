@@ -19,6 +19,11 @@ namespace OdeToVeggie.Services
             };
         }
 
+        public Restaurant Get(int Id)
+        {
+            return _resturants.FirstOrDefault(r => r.Id == Id);
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return _resturants.OrderBy(r => r.Name);
