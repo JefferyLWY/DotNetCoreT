@@ -1,1 +1,1 @@
-# DOT NET CORE Tutorial by Scoot Allen on PluralSight
+# ASP DOT NET Core Tutorial by Scoot Allen on PluralSight
