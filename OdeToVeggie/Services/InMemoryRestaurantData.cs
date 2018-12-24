@@ -19,6 +19,13 @@ namespace OdeToVeggie.Services
             };
         }
 
+        public Restaurant Add(Restaurant restaurant)
+        {
+            restaurant.Id = _resturants.Max(r => r.Id) + 1;
+            _resturants.Add(restaurant);
+            return restaurant;
+        }
+
         public Restaurant Get(int Id)
         {
             return _resturants.FirstOrDefault(r => r.Id == Id);

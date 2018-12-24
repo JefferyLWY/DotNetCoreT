@@ -10,5 +10,6 @@ namespace OdeToVeggie.Services
     {
         IEnumerable<Restaurant> GetAll();
         Restaurant Get(int Id);
+        Restaurant Add(Restaurant restaurant);
     }
 }
